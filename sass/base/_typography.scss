@@ -1,0 +1,43 @@
+.heading-primary {
+    margin-bottom: 3rem;
+    backface-visibility: hidden;
+    font-family: "Grandstander", cursive;
+
+    &--main {
+        display: block;
+        font-weight: 400;
+        letter-spacing: -.5rem;
+        margin-left: -1rem;
+
+        .name1 {
+            font-size: 8.5rem;
+            animation-name: bringLettersTogether;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            color: $yellow-100;
+        }
+
+        .name2 {
+            font-size: 6rem;
+            color: $blue-100;
+            animation-name: fadeIn;
+            animation-duration: 1s;
+            animation-delay: 1.4s;
+            animation-fill-mode: both;
+        }
+    }
+
+    &--sub {
+        display: flex;
+        font-size: 2rem;
+        font-weight: 500;
+        justify-content: center;
+        letter-spacing: .8rem;
+
+        span {
+            animation: text-pop calc(2s + calc(350ms * var(--i))) ease-in-out forwards,
+                text-pop-infinite calc(calc(1.5s * calc(var(--i) * 2))) ease-in-out 3.25s infinite;
+        }
+    }
+}

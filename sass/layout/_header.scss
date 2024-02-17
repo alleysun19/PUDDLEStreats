@@ -1,0 +1,34 @@
+.header {
+    height: 95vh;
+
+    /* Photo by James Lacy on Unsplash */
+    background-image: linear-gradient(to right bottom,
+            $hero-gradient1,
+            $hero-gradient2),
+        url("../img/hero.jpg");
+
+    background-size: cover;
+    background-position: bottom;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    position: relative;
+
+    &__logo-box {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+    
+    &__logo {
+        height: 7rem;
+    }
+    
+    &__text-box {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}

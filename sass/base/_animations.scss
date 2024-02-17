@@ -1,0 +1,68 @@
+@keyframes bringLettersTogether {
+
+    0% {
+        opacity: 0;
+        color: $yellow-500;
+        letter-spacing: 20rem;
+    }
+
+    100% {
+        color: $yellow-100;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes text-pop {
+    0% {
+        color: hsla(120, 92%, 20%, 0.5);
+    }
+
+    70% {
+        color: $yellow-100;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+@keyframes text-pop-infinite {
+    0% {
+        color: white;
+    }
+
+    30% {
+        color: $blue-100;
+    }
+
+    70% {
+        color: $yellow-100;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        transform: translateY(2rem);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

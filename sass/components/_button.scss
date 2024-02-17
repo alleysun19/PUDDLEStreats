@@ -1,0 +1,62 @@
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    background: $blue-100;
+    border: solid .6rem rgba($yellowgreen-100, .5);
+    position: relative;
+    background-clip: padding-box;
+    transition: all 200ms;
+    color: #777;
+    font-size: 1.6rem;
+
+    &:hover {
+        background: $blue-100;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+        box-sizing: border-box;
+
+        &::after {
+            transform: scaleX(115%) scaleY(130%);
+            opacity: 70%;
+        }
+        
+        &:active::after {
+            transform: scaleX(108%) scaleY(130%);
+            opacity: 95%;
+        }
+    }
+
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        border-color: $yellowgreen-100;
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        box-sizing: content-box;
+        height: 100%;
+        width: 100%;
+        border-radius: inherit;
+        position: absolute;
+        top: calc(.4rem * -1);
+        left: calc(.4rem * -1);
+        transition: all 200ms;
+    
+        border-top: solid .4rem hsla(0, 0%, 0%, 0);
+        border-bottom: solid .4rem hsla(0, 0%, 0%, 0);
+    
+        border-left: solid .4rem $yellowgreen-100;
+        border-right: solid .4rem $yellowgreen-100;
+    
+        opacity: 0;
+    }
+    
+    &--animated {
+        animation: moveInBottom .750s ease-out .7s;
+        animation-fill-mode: backwards;
+    }
+}
