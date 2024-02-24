@@ -9,6 +9,7 @@
   "author": "Alyson Leonard",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^9.0.0"
+    "node-sass": "^9.0.0",
+    "live-server": "^1.2.2"
   }
 }

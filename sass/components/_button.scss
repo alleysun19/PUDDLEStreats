@@ -9,8 +9,8 @@
     position: relative;
     background-clip: padding-box;
     transition: all 200ms;
-    color: #777;
-    font-size: 1.6rem;
+    color: var(--grey-100);
+    font-size: $default-font-size;
 
     &:hover {
         background: $blue-100;
@@ -58,5 +58,29 @@
     &--animated {
         animation: moveInBottom .750s ease-out .7s;
         animation-fill-mode: backwards;
+    }
+}
+
+.btn-text {
+    &:link, 
+    &:visited {
+        font-size: $default-font-size;
+        color: $green-700;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $green-700;
+        padding: 3px;
+    }
+    &:hover {
+        background-color: lighten($green-700, 10%);
+        color: $yellow-100;
+        transform: translateY(-3px);
+        border: none;
+        box-shadow: 0 1rem 2rem rgba($green-300, .55);
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 1rem 1rem rgba($green-300, .55);
     }
 }

@@ -1,0 +1,78 @@
+.titles.animate *:not(.title-with-img__photo) {
+    animation: fade-in 750ms both;
+}
+
+.title-with-img{
+    z-index: 1;
+    transition: all 250ms;
+    overflow: hidden;
+
+    &__text {
+        text-align: center;
+        font-size: 3rem;
+        border-radius: 2px;
+        background-color: $green-300;
+        padding: 1rem;
+        opacity: 0;
+    }
+
+    &__photo {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        &.half {
+            height: 20rem;
+        }
+        &.whole {
+            height:40rem;
+        }
+        .titles.animate &:first-child {
+            animation: move-in-from-top 750ms both;
+        }
+        .titles.animate &:last-child {
+            animation: move-in-from-bottom 750ms both;
+        }
+    }
+
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes move-in-from-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes move-in-from-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}

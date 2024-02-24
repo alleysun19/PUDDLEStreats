@@ -41,3 +41,34 @@
         }
     }
 }
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $hero-gradient1, $hero-gradient2);
+    display: inline-block;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: transform 250ms;
+
+    &:hover {
+        transform: scale(120%);
+        background-image: linear-gradient(to right, darken($hero-gradient1, 15%), lighten($hero-gradient2, 15%));
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

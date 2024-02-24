@@ -1,7 +1,21 @@
-$hero-gradient1: rgba(126, 213, 111, 0.8);
-/* $hero-gradient2: rgba(45, 180, 40, 0.8); */
-$hero-gradient2: rgba(76, 145, 59, 0.8);
+$black: rgb(17, 19, 18);
+$grey-100: #f7f7f7;
+
+$hero-gradient1: hsla(111, 55%, 64%, 0.8);
+$hero-gradient2: hsla(108, 42%, 40%, 0.8);
+
+$green-300: hsl(111, 55%, 64%);
+$green-700: hsl(110, 32%, 37%);
+
 $yellow-500: hsl(54, 100%, 65%);
 $yellow-100: hsl(54, 100%, 90%);
 $yellowgreen-100: hsl(80, 90%, 85%);
+
 $blue-100: hsl(184, 70%, 80%);
+
+//grid
+$grid-width: 114rem;
+$gutter-vertical: 1.5rem;
+$gutter-horizontal: 1rem;
+
+$default-font-size: 1.6rem;
